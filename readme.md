@@ -69,3 +69,11 @@ This project includes a Jenkinsfile that automates the deployment workflow.
 - **Automated Testing**: Unit tests using Mocha, Chai, and Supertest.
 - **Dockerized**: specific `Dockerfile` for production-ready container image.
 - **CI/CD Ready**: Complete `Jenkinsfile` for automated build and deployment.
+
+
+### 🏁 Summary
+
+- This hands-on project shows how to:
+- Automate builds with GitHub + Jenkins
+- Use Docker to containerize a Node.js app
+- Run the app on AWS EC2 instance as part of a CI/CD flow
