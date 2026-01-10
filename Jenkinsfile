@@ -41,7 +41,7 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                withDockerRegistry(credentialsId: 'docker-cred') {
+                withDockerRegistry(credentialsId: 'docker-cred', url: 'https://index.docker.io/v1/') {
                     sh '''
                         docker push ${DOCKER_IMAGE}:${DOCKER_TAG}
                         docker push ${DOCKER_IMAGE}:latest
@@ -75,7 +75,7 @@ pipeline {
             echo 'Cleaning up Docker build images...'
             sh '''
             docker rmi ${DOCKER_IMAGE}:${DOCKER_TAG} || true
-            docker image prune -f || true
+            docker rmi ${DOCKER_IMAGE}:latest || true
             '''
         }
     }
