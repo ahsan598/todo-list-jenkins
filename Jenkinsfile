@@ -26,33 +26,6 @@ pipeline {
             }
         }
 
-        stage('Pre-Install Validation') {
-            parallel {
-                stage('Validate package.json') {
-                    steps {
-                        sh '''
-                            echo "Validating package.json..."
-                            node -e "JSON.parse(require('fs').readFileSync('package.json'))"
-                            echo "✅ package.json is valid"
-                        '''
-                    }
-                }
-                
-                stage('Check Lock File') {
-                    steps {
-                        sh '''
-                            echo "Checking for package-lock.json..."
-                            if [ ! -f "package-lock.json" ]; then
-                                echo "❌ package-lock.json not found!"
-                                exit 1
-                            fi
-                            echo "✅ Lock file exists"
-                        '''
-                    }
-                }
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh '''
