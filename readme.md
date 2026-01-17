@@ -1,17 +1,15 @@
 # Node.js Todo List App
 
-
 ### 🎯 Project Overview
-A simple, containerized Todo List application built with **Node.js and Express**. This project demonstrates a complete DevOps workflow including **Docker** containerization and a CI/CD pipeline using **Jenkins**.
+A simple, containerized ToDo application built with **Node.js**, showcasing a complete DevOps workflow with Dockerized deployment and an automated CI/CD pipeline using **Jenkins**.
 
-### 🛠️ Tech Stack
-- **Backend**: Node.js, Express.js
-- **Frontend**: EJS, CSS
-- **Testing**: Mocha, Chai, Supertest
-- **DevOps**: Docker, Jenkins, Git
+**Tech Stack**
+1. **Backend:** Node.js, Express, EJS
+2. **Testing:** Mocha, Chai, Supertest
+3. **DevOps:** Docker, Jenkins, Git
 
 ### ⚙️ Architect Diagram
-![Architect Diagram](/assets/workflow.png)
+![Architect Diagram](./assets/workflow.png)
 
 
 ### 📋 Prerequisites
@@ -28,10 +26,6 @@ Before you start, make sure you have installed:
 ### 💻 How to Run Locally
 
 ```sh
-# Clone the Repository
-git clone https://github.com/ahsan598/todo-list-jenkins.git
-cd todo-list-jenkins
-
 # Install Dependencies
 npm install
 
@@ -40,12 +34,11 @@ npm start
 
 # Access the app in your browser http://localhost:8000/todo
 ```
-![ToDo](/assets/verify.png)
+![ToDo](./assets/verify.png)
 
 
 ### 🔄 Jenkins CI/CD Pipeline
-
-This project includes a Jenkinsfile that automates the deployment workflow.
+The **Jenkinsfile orchestrates the entire build and run process**, from dependency installation to Docker image creation and automated deployment.
 
 **I. Pipeline Stages:**
 1. **Checkout:** Pulls code from GitHub.
@@ -62,7 +55,6 @@ This project includes a Jenkinsfile that automates the deployment workflow.
 
 
 ### 🚀 Features
-
 1. **CRUD Operations**: Add, Edit, and Delete todo items.
 2. **Clean UI**: Server-side rendering using EJS templates.
 3. **Automated Testing**: Unit tests using Mocha, Chai, and Supertest

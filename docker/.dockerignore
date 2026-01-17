@@ -3,7 +3,5 @@ npm-debug.log
 .env
 .git
 .gitignore
-Dockerfile
-docker-compose.yml
 .DS_Store
 README.md
